@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  service1:
+    build:
+      context: . 
+      dockerfile: Service1/Dockerfile
+    ports:
+      - "5001:80"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    external: true
